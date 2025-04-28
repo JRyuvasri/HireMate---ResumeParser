@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HireMate</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background-color: #f0f2f5;
+        }
+
+        .navbar { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            padding: 20px 5%; 
+            background: linear-gradient(to right, #007bff, #0056b3);
+            color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .logo-img {
+            width: 80px; /* Adjust the width as needed */
+            height: auto;
+            margin-right: 10px; /* Space between the logo and text */
+        }
+
+        .nav-links a { 
+            color: white; 
+            text-decoration: none; 
+            margin: 0 15px; 
+            font-weight: 600; 
+            cursor: pointer;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .nav-links a.active {
+            background: white;
+            color: #007bff;
+        }
+
+        .hero { 
+            text-align: center; 
+            padding: 80px 20px;
+            background: white;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.2em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            animation: fadeIn 1s ease-in;
+        }
+
+        .hero p {
+            font-size: 1.3em;
+            color: #666;
+            margin-bottom: 40px;
+        }
+
+        .cta-container { 
+            margin-top: 40px;
+        }
+
+        .get-started-btn {
+            padding: 15px 40px;
+            font-size: 18px;
+            font-weight: 600;
+            color: white;
+            background: linear-gradient(45deg, #007bff, #00bfff);
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,123,255,0.3);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .get-started-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,123,255,0.4);
+            background: linear-gradient(45deg, #0056b3, #0098ff);
+        }
+
+        .get-started-btn:active {
+            transform: translateY(-1px);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                padding: 15px;
+            }
+
+            .nav-links {
+                margin-top: 15px;
+            }
+
+            .nav-links a {
+                margin: 5px;
+                font-size: 14px;
+            }
+
+            .hero h1 {
+                font-size: 2.2em;
+            }
+
+            .hero p {
+                font-size: 1.1em;
+            }
+
+            .get-started-btn {
+                padding: 12px 30px;
+                font-size: 16px;
+            }
+
+            .logo-img {
+                width: 30px; /* Adjust logo size for mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.png.jpg" alt="HireMate Logo" class="logo-img">
+            HireMate
+        </div>
+        <div class="nav-links">
+            <a href="#" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="service.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <main class="hero">
+        <div class="hero-content">
+            <h1>Hi, We are HireMate</h1>
+            <p>Your trusted partner in professional recruitment solutions</p>
+            <div class="cta-container">
+                <button class="get-started-btn" onclick="redirectToDashboard()">Get Started</button>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function redirectToDashboard() {
+            window.location.href = "http://localhost:8501"; // Redirects to your desired URL
+        }
+    </script>
+</body>
+</html>
